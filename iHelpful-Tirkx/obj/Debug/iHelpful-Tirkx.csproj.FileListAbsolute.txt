@@ -1,0 +1,17 @@
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\bin\Debug\iHelpful_Tirkx.exe.config
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\bin\Debug\iHelpful_Tirkx.exe
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\bin\Debug\iHelpful_Tirkx.pdb
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\App.g.cs
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx_MarkupCompile.cache
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx.g.resources
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx.Properties.Resources.resources
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful-Tirkx.csproj.GenerateResource.Cache
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx.exe
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx.pdb
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\TirkxAnime.baml
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\TirkxAnime.g.cs
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\App.baml
+C:\Users\HaKko\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful-Tirkx.csprojResolveAssemblyReference.cache
+C:\Users\Touno\OneDrive\Workbranch\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\bin\Debug\iHelpful_Tirkx.exe.config
+C:\Users\Touno\OneDrive\Workbranch\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx.exe
+C:\Users\Touno\OneDrive\Workbranch\My HelpfulTool\iHelpful-Tirkx\iHelpful-Tirkx\obj\Debug\iHelpful_Tirkx.pdb

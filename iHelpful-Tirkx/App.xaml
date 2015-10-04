@@ -1,0 +1,112 @@
+﻿<Application x:Class="iHelpful_Tirkx.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="TirkxAnime.xaml">
+    <Application.Resources>        
+    	<SolidColorBrush x:Key="Button.Static.Background" Color="#FFFAFAFA"/>
+    	<SolidColorBrush x:Key="Button.Static.Border" Color="#FFE6E6E6"/>
+    	<SolidColorBrush x:Key="Button.Static.Foreground" Color="#FF1F1F1F"/>
+    	<SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFDDDDDD"/>
+    	<SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF707070"/>
+    	<SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+    	<SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF707070"/>
+    	<SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+    	<Style x:Key="ButtonMenu" TargetType="{x:Type Button}">
+    		<Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+    		<Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+    		<Setter Property="Foreground" Value="{StaticResource Button.Static.Foreground}"/>
+    		<Setter Property="BorderThickness" Value="0,0,0,2"/>
+    		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+    		<Setter Property="VerticalContentAlignment" Value="Center"/>
+    		<Setter Property="Padding" Value="4,1,4,1"/>
+			<Setter Property="Cursor" Value="Hand"/>
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+    						<ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+    					</Border>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsDefaulted" Value="true">
+    							<Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+    						</Trigger>
+    						<Trigger Property="IsMouseOver" Value="true">
+    							<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Static.Background}"/>
+    							<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+    						</Trigger>
+    						<Trigger Property="IsPressed" Value="true">
+    							<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Static.Background}"/>
+    							<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+    						</Trigger>
+    						<Trigger Property="IsEnabled" Value="false">
+    							<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Static.Background}"/>
+    							<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Static.Border}"/>
+    							<Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+								<Setter Property="Cursor" TargetName="border" Value="Arrow"/>
+    						</Trigger>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+        </Style>
+        <ImageBrush x:Key="Close.Normal" ImageSource="images/Close_Normal.png"/>
+        <ImageBrush x:Key="Close.Hover" ImageSource="images/Close_Hover.png"/>
+        <Style x:Key="ButtonClosed" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource Close.Normal}"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Close.Hover}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{x:Null}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Close.Hover}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{x:Null}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ImageBrush x:Key="Minimum.Normal" ImageSource="images/Mini_Normal.png"/>
+        <ImageBrush x:Key="Minimum.Hover" ImageSource="images/Mini_Hover.png"/>
+        <Style x:Key="ButtonMinimum" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource Minimum.Normal}"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Minimum.Hover}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{x:Null}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Minimum.Hover}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{x:Null}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
